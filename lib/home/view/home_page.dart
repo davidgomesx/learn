@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:learn/authentication/authentication.dart';
+import 'package:learn/ui/ui.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -27,16 +28,20 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
-      body: Align(
-        alignment: const Alignment(0, -1 / 3),
+      body: Center(
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Avatar(photo: user.photo),
-            // const SizedBox(height: 4),
-            Text(user.email ?? '', style: textTheme.headline6),
-            const SizedBox(height: 4),
-            Text(user.name ?? '', style: textTheme.headline5),
+            UiButton.compact(
+              color: Colors.blue.shade500,
+              text: 'Earthquake',
+              onPressed: () {},
+            ),
+            UiButton.compact(
+              color: Colors.amber,
+              text: 'text',
+              onPressed: () {},
+            ),
           ],
         ),
       ),
