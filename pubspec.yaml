@@ -9,12 +9,17 @@ environment:
 
 dependencies:
   bloc: ^8.1.0
+  equatable: ^2.0.5
+  firebase_auth: ^4.2.0
   firebase_core: ^2.3.0
+  flow_builder: ^0.0.9
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
   flutter_localizations:
     sdk: flutter
+  font_awesome_flutter: ^10.3.0
+  formz: ^0.4.1
   google_sign_in: ^5.4.2
   intl: ^0.17.0
 
@@ -28,3 +33,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/
+    
