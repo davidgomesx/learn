@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:learn/authentication/authentication.dart';
+import 'package:learn/earthquakes/earthquakes.dart';
 import 'package:learn/ui/ui.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,8 +12,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-    final user = context.select((AuthenticationBloc bloc) => bloc.state.user);
+    // final textTheme = Theme.of(context).textTheme;
+    // final user = context.select((AuthenticationBloc bloc) => bloc.state.user);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
@@ -35,7 +36,14 @@ class HomePage extends StatelessWidget {
             UiButton.compact(
               color: Colors.blue.shade500,
               text: 'Earthquake',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push<MaterialPageRoute>(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const EarthquakesPage(),
+                  ),
+                );
+              },
             ),
             UiButton.compact(
               color: Colors.amber,
